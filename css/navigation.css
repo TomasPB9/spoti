@@ -1,0 +1,31 @@
+.navigation{
+  /* border: 1px solid red; */
+  flex-shrink: 0;
+}
+
+.navigation button{
+  /* border: 1px solid red; */
+  background: var(--gray60);
+  color: var(--gray10);
+  inline-size: 1.875rem;
+  block-size: 1.875rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.navigation button:disabled {
+  opacity: 0.5;
+  /* al hacer hover marca un logo que no esta permitido clickear sobre ese elemento */
+  cursor: not-allowed;
+}
+
+/* centra icono dentro del boton */
+.navigation-prev i{
+  position: relative;
+  left: -1px;
+}
+
+.navigation-next i{
+  position: relative;
+  left: 2px;
+}

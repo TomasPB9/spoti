@@ -1,0 +1,48 @@
+.search{
+  position: relative;
+  /* flex-shrink: 0;
+  flex-grow: 1; */
+  /* toma todo el campo disponible, excepto que adentro del input tiene un ancho maximo (la search tiene todo el ancho
+  pero el input se queda hasta lo que pueda ocupar segun las reglas que le hemos dado, se expande pero no se expande
+  mas de lo que se ha establecido )*/
+  flex: 1;
+}
+
+/* los elementos de input de formulario no pueden tener los pseudoelementos de after y before */
+
+.search i{
+  position: absolute;
+  /* damos tamaño de fuente al icono */
+  font-size: 1rem;
+  left: 0.5rem;
+  /* top: 0.5rem; */
+  /* calc() =>funcion de css que permite hacer calculos matematicos basicos (+,-,/,*)*/
+  top: calc(50% - 0.5rem);
+  block-size: 1rem;
+  color: var(--gray10);
+}
+
+/* los elementos de input por defecto tienen un ancho (se llaman tamaño intrinsicos) es una caracteristicas que los
+navegadores imponen para que algunos elementos que se asumen que reciben informacion por dentro como los input
+tengan algun tamaño para que sean visibles en el navegador*/
+.search input{
+  color: var(--gray30);
+  font: var(--baseFont);
+  border-radius: 1.25rem;
+  border: none;
+  max-inline-size: 22rem;
+  /* por eso se pone el width del 100% para que se expande el tamaño definido por max-inline-size */
+  width: 100%;
+  padding: 0.5rem;
+  padding-inline-start: 2rem;
+}
+
+/* cambia color a icono de search cuando se hace focus sobre el */
+.search:focus-within i{
+  color: var(--gray30);
+}
+
+/* cambia color a placeholder */
+.search input::-webkit-input-placeholder{
+  color: var(--gray10);
+}

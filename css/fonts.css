@@ -1,0 +1,21 @@
+@font-face {
+  /*  Si solamente es una palabra no es necesario ponerla entre comillas, si son más si son necesarias las comillas */
+  font-family: Avenir;
+  src: url('../fonts/AvenirLTStd-Black.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  /*  Si solamente es una palabra no es necesario ponerla entre comillas, si son más si son necesarias las comillas */
+  font-family: Avenir;
+  src: url('../fonts/AvenirLTStd-Roman.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*  Si solamente es una palabra no es necesario ponerla entre comillas, si son más si son necesarias las comillas */
+  font-family: Avenir;
+  src: url('../fonts/AvenirLTStd-Book.otf');
+  font-weight: normal;
+  font-style: normal;
+}

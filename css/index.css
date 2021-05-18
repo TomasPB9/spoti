@@ -1,0 +1,52 @@
+@import './icons.css';
+@import './fonts.css';
+@import './body.css';
+@import './link.css';
+@import './button-icon.css';
+@import './sidebar.css';
+@import './ellipsis.css';
+@import './player.css';
+@import './page.css';
+@import './layout.css';
+@import './scrollbar.css';
+
+:root{
+/*condiciones que usare en todo el proyecto*/
+  font-size: 14px;
+  --primary: #00B050;
+  --white: #ffffff;
+  --gray10: #B3B3B3;
+  --gray20: #737373;
+  --gray30: #282828;
+  --gray40: #181818;
+  --gray50: #121212;
+  --gray60: #000000;
+
+  /*se ponen otras fuentes separadas por coma, que se cargan de formal altera si no se encuentra la 'Avenir'  y la 'san-serif'
+  que es cualquiera del S.O*/
+  --baseFontFamily: Avenir, Helvetica, sans-serif;
+  /* font: [ <font-style> || <font-variant> || <font-weight> ]? <font-size> [ / <line-height> ]? <font-family> */
+  --headline1: bold 2rem/normal var(--baseFontFamily);
+  --headline2: bold 1.5rem/1.75rem var(--baseFontFamily);
+  --baseFont: normal 0.875rem/1.375rem var(--baseFontFamily);
+  --baseFontBold: bold 0.875rem/1.375rem var(--baseFontFamily);
+  --button: bold 0.875rem/1rem var(--baseFontFamily);
+  /*small=> tendra el 75% del tamaño de su padre (por eso es 0.75em) y normal para que vaya con relación que se le ponga con
+  el tamaño de fuente*/
+  --small: normal 0.75em/normal var(--baseFontFamily);
+}
+
+/* escala dependiendo el min width de la pantalla donde se esta visualizando */
+/* cualquier device a tablet o inferior con ese ancho min */
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* cualquier laptop o inferior con ese ancho min */
+@media screen and (min-width: 1367px) {
+  :root {
+    font-size: 18px;
+  }
+}

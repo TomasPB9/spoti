@@ -1,0 +1,49 @@
+.slider{
+  /* inline-size: 200px; */
+  block-size: 0.25rem;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 0.25rem;
+}
+
+.slider:hover .slider-progress{
+  background: var(--primary);
+}
+
+/* aparece el boton bolita blanca en la barra de progreso */
+.slider:hover .slider-button{
+  display: block;
+}
+
+.slider-progress{
+  /* con inherit heredamos el tamaño del padre*/
+  block-size: inherit;
+  border-radius: inherit;
+  background: var(--white);
+  inline-size: 20%;
+  /* es su contenedor por eso es relativo */
+  position: relative;
+}
+
+/* boton bolita blanca en la barra de repoduccion */
+.slider-button{
+  background: var(--white);
+  padding:0;
+  border: 0;
+  /* duplica el tamañao del padre (0.25rem*2= 8px) */
+  block-size: 200%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+
+  /* siempre que el padre se mueva el hijo se mueve */
+  position: absolute;
+  /* donde acaba el padre, empieza el hijo */
+  left: 100%;
+  /* mueve el 50% del alto pero del padre osea la barra*/
+  top: 50%;
+  /* recibe 2 propiedades(eje x, eje y) */
+  /* eje x equivale a -50% de el mismo y lo mueve en esa direccion, en este caso a la izq porque es -50%*/
+  /* eje y equivale a -50% de el mismo y lo mueve en esa direccion, en este caso hacia arriba porque es -50% */
+  transform: translate(-50%, -50%);
+  /* quita el boton bolita blanca en la barra de progreso */
+  display: none;
+}

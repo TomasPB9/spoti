@@ -1,0 +1,36 @@
+.list{
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+}
+
+.list-title{
+  font: var(--baseFont);
+  margin-block-start: 0;
+  margin-block-end: 0.5rem;
+}
+
+.list-content{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /*separa a cada flex item dentro del flex container*/
+  gap: 0.5rem;
+}
+
+.list-item{
+  /* background: red; */
+  /* margin-block-end: 0.5rem; */
+}
+
+/* .list-item:last-child{
+  margin-block-end: 0;
+} */
+
+.list-item a{
+  font: var(--baseFontBold);
+  /* leve transicion de color cuando pasamos el cursos sobre los enlaces */
+  transition: color 0.2s;
+}
+

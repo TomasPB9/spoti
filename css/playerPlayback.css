@@ -1,0 +1,19 @@
+.playerPlayback{
+  display: flex;
+  /* alinea en el eje transversal */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playerPlayback-slider{
+  /* equivale a flex grow =! , flex shrink 1 , flex basis 0% */
+  flex: 1;
+}
+
+.playerPlayback-progressTime{
+  /* hace el tamaño de linea igual al taamaño de fuente+ */
+  font: var(--small);
+  line-height: 1;
+  position: relative;
+  top: 1px;
+}

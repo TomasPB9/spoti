@@ -1,0 +1,13 @@
+.ellipsis{
+  overflow: hidden;
+}
+
+.ellipsis > *{
+  display: block;
+  /* hace que no brinque el texto si excede el tamaño del container de donde esta */
+  white-space: nowrap;
+  /* esconde el desbordamiento del texto */
+  overflow: hidden;
+  /* pone ... cuando hay un desbordamiento del texto dentro del container donde se encuentra */
+  text-overflow: ellipsis;
+}

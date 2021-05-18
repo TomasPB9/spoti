@@ -1,0 +1,23 @@
+.header{
+  /* border: 1px solid red; */
+  display: flex;
+  /* separacion entre flex items */
+  gap: 1rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1.5rem;
+  align-items: center;
+  /* hace protagonista el header (pixelea los elementos de atras de el) dependiendo los px hacer un desfuminado mayor,
+  NO es sportador por todos los navegadores (como safari) */
+  backdrop-filter: blur(5px);
+}
+
+/* si no sopoorta esa propiedad el navedaor, ejecuta lo que hay adentro de las llaves en los selectores que ponga, es como
+mediaquerie pero en estilo No lo soporto */
+/* safari tampoco soporta la propiedad gap */
+@supports not(backdrop-filter: blur(5px)){
+  .header{
+    background: var(--gray50);
+  }
+}

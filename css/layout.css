@@ -1,0 +1,51 @@
+/* maximo tamaño al que se adapta, lo minimo que tolera de alto => 600 px y lo ancho => 768px , 768px es una medida estandar
+ de 16/9, y el alto de los 600px (el estandar de las pantallas suelen ser 768 px o un poco mas) pero normalmente siempre
+ se tiene la barra de navegacion abajo y la barra de estado arriba, por lo tanto el SWEET SPOT segun spotify son 600px  */
+
+:root {
+  --sidebarInlineSize: 15rem;
+  --minBlockSize: 37.5rem;
+  --minInlineSize: 48rem;
+  --bottomSize: 5.5rem;
+}
+
+.layout{
+  /* box-shadow: inset 0 0 0 10px red; */
+  /* tamaño minimo que puede tener el layout para hacer resize */
+  min-inline-size: var(--minInlineSize);
+}
+
+/* Al usarla varios divs ganamos control de manera granular y dandoles responsabilidades y propiedades a los elementos
+ que deberian tenerla */
+
+.layout-sidebar{
+  /* vh => unidad que toma el alto del viewport (viewport high) , cuanta area tiene mi navegador visible*/
+  /* 100vh => equivale al 100% del alto que tiene fisicamente mi navegador */
+  /* calc(100vh - var(--bottomSize)); => hace un calculo y le resta al vwHeigh el tamaño del reproductor */
+  block-size: calc(100vh - var(--bottomSize));
+  min-block-size: var(--minBlockSize);
+  inline-size: var(--sidebarInlineSize);
+  /* para que los elementos tambien puedan scrollear de manera vertical*/
+  overflow: auto;
+  flex-shrink: 0;
+  background: var(--gray60);
+}
+
+.layout-main{
+  /* vh => unidad que toma el alto del viewport (viewport high) , cuanta area tiene mi navegador visible*/
+  /* 100vh => equivale al 100% del alto que tiene fisicamente mi navegador */
+  /* calc(100vh - var(--bottomSize)); => hace un calculo y le resta al vwHeigh el tamaño del reproductor */
+  block-size: calc(100vh - var(--bottomSize));
+  min-block-size: var(--minBlockSize);
+  /* overflow para manejar un desborde */
+  overflow: auto;
+}
+
+.layout-bottom{
+  flex: 1;
+  block-size: var(--bottomSize);
+}
+
+.layout-block{
+  display: flex;
+}

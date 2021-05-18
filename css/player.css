@@ -1,0 +1,36 @@
+@import './slider.css';
+@import './player-controls.css';
+@import './playerPlayback.css';
+@import './player-volume.css';
+@import './now-playing.css';
+
+.player{
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  /* margin-block-start: 5rem; */
+  /* un box shadow interno,  eje x, eje y, que no se expanda y color*/
+  box-shadow: inset 0 1px 0 var(--gray30);
+}
+
+.player > * {
+  /* border: 1px solid red; */
+  /* posibilidad de expandirse hasta al 100% */
+  flex: 1;
+}
+
+.player-control{
+  border: none;
+  padding: 0;
+  background: none;
+  color: var(--gray10);
+  /* es un icono por lo tanto se expande con el tamaño de la fuente */
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.player-playerVolume{
+  display: flex;
+  justify-content: flex-end;
+}

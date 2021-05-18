@@ -1,0 +1,41 @@
+/* scrollbar completo */
+::-webkit-scrollbar {
+  /* background: red; */
+  /*  si se pone tanto inline como el block dependiendo si es un scroll horizontal o vertical va a tomar ese elemento, (por
+  la direction)  */
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+}
+
+/* buttons al inicio y final de la barra del scroll */
+/* ::-webkit-scrollbar-button {
+  background: blue;
+} */
+
+/* la barra que se desplaza cuando se esta haciendo scroll */
+::-webkit-scrollbar-thumb {
+  background: var(--gray60);
+}
+
+/* color de fondo de la barra de scroll */
+::-webkit-scrollbar-track {
+  background: var(--gray50);
+}
+
+/* PONER Pseudoelemento en el thumb, ejemplo: se puede aplicar propiedades especialmente si es el scroll vertical u
+horizontal como en los sig. ejemplos */
+/* la barra que se desplaza cuando se esta haciendo scroll */
+/* ::-webkit-scrollbar-thumb:horizontal {
+  background: green;
+} */
+
+/* la barra que se desplaza cuando se esta haciendo scroll */
+/* ::-webkit-scrollbar-thumb:vertical {
+  background: pink;
+} */
+
+/* solo ese elemento (.playlistList-container) hace que el scroll horizontal tenga esos colores */
+/* .playlistList-container::-webkit-scrollbar-thumb:horizontal {
+  background: orange;
+} */
+

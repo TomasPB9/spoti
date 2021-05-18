@@ -1,0 +1,35 @@
+.nowPlaying{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nowPlaying-cover img{
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  /* las imagenes siempre que se ponen dentro de un contenedor es que su alineado vertical se hace con la base de escritura
+  (se dibuja un espacio fantasma en la parte inferior de la imagen porque siempre utiliza el baseline por defecto por lo
+  tanto toma el alto de linea de la fuente que utilizamos (fuente 14 que es la base que tiene el body))*/
+  /* Por lo tanto alineamos la imagen con vertical-align: middle; para que no se agrande la caja en su eje transversal
+  y siempre se mantenga centrada */
+  vertical-align: middle;
+}
+
+.nowPlaying-details{
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nowPlaying-title{
+  color: var(--white);
+  font: var(--baseFontBold);
+  text-decoration: none;
+  /* provoca que el elemento de abajo se coloca en otra linea */
+  display: block;
+}
+
+.nowPlaying-artist{
+  color: var(--gray10);
+  font: var(--small);
+  text-decoration: none;
+}

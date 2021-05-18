@@ -1,0 +1,10 @@
+.playerVolume{
+  display: flex;
+  /* alineacion en el eje tranversal */
+  align-items: center;
+}
+
+.playerVolume-slider{
+  flex: 1;
+  inline-size: 6rem;
+}

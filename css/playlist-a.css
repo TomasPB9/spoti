@@ -1,0 +1,74 @@
+.playlistA{
+  /* border: 1px solid red; */
+  /* font-size: 14px; porque esta heredando de base-font, por lo que el elemento escala segun el texto*/
+  /* No escala segun el tamaño de fuente base, si no segun el tamaño de fuente de los elemento que esten dentro de
+  ese container */
+  /* el elemento va a escalar según el texto */
+  inline-size: 13em;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: var(--gray40);
+  /* tendriamos que restarle el padding(1 rem) a inline-size: inline-size(13 em), pero para no hacerlo aplicamos
+  box-sizing: border-box; porque quiero que obedezcan a diferentes reglas */
+  box-sizing: border-box;
+  /* tranforma color del background con una transision de 0.3segundos */
+  transition: 0.3s background;
+}
+
+/* ACCESIBILITY con ( evento focus, y pseudoclase focuswithin)
+Focuswithin => se activa cuando un elemento que sea hijo de otro elemento se ponga en foco (quiere decir el hijo activa
+el foco pero el padre reacciona) */
+.playlistA:hover , .playlistA:focus-within{
+  /* para cambiar el color del background con una leve transision */
+  cursor: pointer;
+  background: var(--gray30);
+}
+
+.playlistA:hover .playlistA-cover button,
+.playlistA:focus-within .playlistA-cover button{
+  /* aparece el boton al hacer hover dentro del cover con una leve transision */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.playlistA-cover img{
+  vertical-align: middle;
+  /* valores logicos (inline-size, block-size) tienen mayor jerarquia que valores fisicos (width, height)*/
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.playlistA-cover{
+  position: relative;
+  /* se le da border-radius al padre, en este caso al div que tiene la clase .playlistA-cover */
+  border-radius: 0.75rem;
+  /* para que no se desborde la imagen */
+  overflow: hidden;
+  margin-block-end: 1rem;
+}
+
+.playlistA button{
+  /* segun el DOM el elemento posicionado de manera absoluta debe seguir el flujo (orden) de la aplicacion (del index.html) */
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  /* desparece y aparece el boton con transision cuando hacemos hover dentro del cover */
+  opacity: 0;
+  transition: 0.3s opacity, 0.3s transform;
+  /* transformacion de transalacion que mueva levemente el elemento   */
+  transform: translateY(0.5rem);
+  will-change: opacity, transform;
+}
+
+.playlistA-title{
+  font: var(--baseFontBold);
+  color: var(--white);
+  /* no tiene margen,solo obedece al alto de linea de cada uno de los elementos, entonces a los elementos se les pone margin:0*/
+  margin: 0;
+}
+
+.playlistA-description{
+  font: var(--baseFont);
+  /* no tiene margen,solo obedece al alto de linea de cada uno de los elementos, entonces a los elementos se les pone margin:0*/
+  margin: 0;
+}

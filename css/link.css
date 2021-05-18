@@ -1,0 +1,11 @@
+.link{
+  color: var(--gray10);
+  /*quita el underline que esta predeterminado por el tag <a></a>*/
+  text-decoration: none;
+}
+
+.link:hover{
+  color: var(--white);
+  /*al pasar el mouse colorea la ancla blanco y subraya el enlace*/
+  text-decoration: underline;
+}

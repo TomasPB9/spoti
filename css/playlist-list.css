@@ -1,0 +1,35 @@
+@import './playlist-a.css';
+@import './playlist-b.css';
+
+.playlistList{
+  /* border: 1px solid red; */
+}
+
+.playlistList-top{
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  margin-block-end: 1rem;
+  /* border: 1px solid red; */
+  /* aleja elementos de top y navigation, de igual manera mantiene 1 rem de separacion always */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playlistList-title{
+  font: var(--headline2);
+  color: var(--white);
+}
+
+.playlistList-container{
+  display: flex;
+  /* contenedor flexible se hace dueño del scroll horizontal osea (eje x/eje principal/ modo de escritura) */
+  /* overflow-x => solamente aguanta scroll horizontal (tecnicamente correcto) */
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.playlistList-container > * {
+  flex-shrink: 0;
+}

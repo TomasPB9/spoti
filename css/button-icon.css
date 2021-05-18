@@ -1,0 +1,42 @@
+.buttonIcon{
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: var(--gray10);
+}
+
+.buttonIcon.is-white{
+  background: var(--white);
+  /* le cambia el color al texto que esta adentro del button en este caso es el icono */
+  color: var(--gray50);
+}
+
+.buttonIcon.is-primary{
+  background: var(--primary);
+  color: var(--white);
+}
+
+/*centra solo el boton de play, siempre pasa esto con los iconos de play */
+.buttonIcon .icon-play{
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+/* se activan estas propiedades cuando se le da click al button */
+.buttonIcon:active{
+  /* se pone de fondo color negro */
+  background: black;
+  /* se hace mas grande o chico cuando demos click en el button */
+  transform: scale(0.95);
+}
+
+/* aplica los sig. solamente a los botones que tienen un estado (button primary y button white)*/
+/* Los estados se definen con .is  */
+/* :is (pseudoclase) que nombre algo que incluya este elemento */
+.buttonIcon:hover:is([class*='is-']){
+  box-shadow: 0 8px 8px rgba(0,0,0,.30);
+}

@@ -1,0 +1,7 @@
+.sticky {
+  /* cuando se hace scroll vertical el header te persigue por la pagina */
+  position: sticky;
+  top: 0;
+  /* lo pone encima de los elementos en su eje z */
+  z-index: 1;
+}
